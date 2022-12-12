@@ -1,0 +1,37 @@
+﻿@{
+  
+}
+@model List<WebApplication1.Models.Student>
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+
+
+            <th scope="col">#</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">University</th>
+            <th scope="col">Phone Number</th> 
+        </tr>
+    </thead>
+    <tbody>
+      @foreach (var e in @Model)
+        {
+            <tr>
+                <th scope="row">@e.id</th>  
+                <td>@e.first_name</td>
+                <td>@e.last_name</td>
+                <td>@e.university</td> 
+                <td>@e.phone_number</td> 
+
+            </tr>
+        }
+
+      
+    </tbody>
+</table>
+
+
+
